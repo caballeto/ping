@@ -47,9 +47,11 @@ int main(int argc, char* argv[]) {
   }
 
   std::string ip = std::string(argv[1]);
-  int ttl;
-  if (argc >= 3) ttl = atoi(argv[2]);
-  ttl = (ttl <= 0 || ttl >= 250) ? 55 : ttl;
+  int ttl = 56;
+  if (argc >= 3){
+    ttl = atoi(argv[2]);
+    ttl = (ttl <= 0 || ttl >= 250) ? 55 : ttl;
+  }
 
   Ping* ping;
   if (IsIpV4(ip)) {
