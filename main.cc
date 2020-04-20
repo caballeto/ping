@@ -67,5 +67,6 @@ int main(int argc, char* argv[]) {
   sigint_handler = [&]() { ping->FlipRunPing(); };
   signal(SIGINT, signal_handler);
   ping->StartPing();
+  delete ping;
   return 0;
 }

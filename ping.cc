@@ -8,6 +8,8 @@ Ping::Ping(const std::string& ip_addr)
   : ip_addr_(ip_addr)
 { }
 
+Ping::~Ping() { }
+
 void Ping::StartPing() {
   clock_gettime(CLOCK_MONOTONIC, &ping_start_);
   while (run_ping_) SendPacket();
