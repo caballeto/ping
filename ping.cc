@@ -8,7 +8,7 @@ Ping::Ping(const std::string& ip_addr)
   : ip_addr_(ip_addr)
 { }
 
-Ping::~Ping() { }
+Ping::~Ping() { close(socket_); }
 
 void Ping::StartPing() {
   clock_gettime(CLOCK_MONOTONIC, &ping_start_);

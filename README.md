@@ -22,3 +22,9 @@ cd ping/
 make
 sudo ./pingcc <ip> [ttl] 
 ```
+
+## Usage
+
+[Simple lookup](./images/use-1.png)
+
+[Set ttl](./images/use-ttl.png)

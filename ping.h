@@ -46,7 +46,7 @@ class Ping {
   virtual int SendPacket() = 0;
   virtual void HandleResponse() = 0;
 
-  virtual ~Ping() = 0;
+  virtual ~Ping();
 
   void StartPing();
   void Stats();
