@@ -54,7 +54,7 @@ int PingIpV6::SendPacket() {
 }
 
 void PingIpV6::HandleResponse() {
-  unsigned char res[50] = "";
+  unsigned char res[30] = "";
   sockaddr_in6 resAddr;
   socklen_t len6 = sizeof(resAddr);
 
